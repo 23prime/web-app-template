@@ -19,7 +19,7 @@ atlas = "1"
 "github:quarylabs/sqruff" = "0.38"
 
 # Testing
-"github:k1LoW/runn" = "1"
+"github:k1LoW/runn" = "v1.9.4"
 
 # Markdown
 markdownlint-cli2 = "0.23.0"
