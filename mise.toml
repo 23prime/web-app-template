@@ -145,13 +145,13 @@ dir = "{{vars.app_dir}}"
 
 [tasks.rs-run]
 description = "Run Rust application"
-run = "cargo run"
+run = "cargo run --bin server"
 alias = "rr"
 dir = "{{vars.app_dir}}"
 
 [tasks.rs-watch]
 description = "Watch for file changes and reload Rust application"
-run = "watchexec --exts rs,toml --restart -- cargo run"
+run = "watchexec --exts rs,toml --restart -- cargo run --bin server"
 alias = "rw"
 dir = "{{vars.app_dir}}"
 
