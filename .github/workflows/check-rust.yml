@@ -3,13 +3,13 @@ name: Check Rust
 on:
   push:
     paths:
-      - "app/src/**"
+      - "app/*/src/**"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
       - ".github/workflows/check-rust.yml"
   pull_request:
     paths:
-      - "app/src/**"
+      - "app/*/src/**"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
       - ".github/workflows/check-rust.yml"

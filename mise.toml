@@ -15,7 +15,7 @@ minimum_release_age = "3d"
 node = "26"
 
 # Database
-atlas = "1.2.3"
+atlas = "1.2.0"
 "github:quarylabs/sqruff" = "0.38"
 
 # Testing
@@ -145,13 +145,13 @@ dir = "{{vars.app_dir}}"
 
 [tasks.rs-run]
 description = "Run Rust application"
-run = "cargo run"
+run = "cargo run --bin server"
 alias = "rr"
 dir = "{{vars.app_dir}}"
 
 [tasks.rs-watch]
 description = "Watch for file changes and reload Rust application"
-run = "watchexec --exts rs,toml --restart -- cargo run"
+run = "watchexec --exts rs,toml --restart -- cargo run --bin server"
 alias = "rw"
 dir = "{{vars.app_dir}}"
 
@@ -217,6 +217,7 @@ alias = "sc"
 description = "Seed database for the specified environment (ENV=local)"
 run = "ENV=\"${ENV:-local}\" cargo run --bin seeder"
 dir = "{{vars.app_dir}}"
+
 # Secrets
 [tasks.secret-check]
 description = "Check staged files for leaked secrets"

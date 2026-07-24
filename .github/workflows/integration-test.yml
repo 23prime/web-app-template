@@ -1,0 +1,70 @@
+name: Integration test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "app/*/src/**"
+      - "app/*/Cargo.toml"
+      - "app/Cargo.toml"
+      - "app/Cargo.lock"
+      - "db/**"
+      - "mise.toml"
+      - "mise.lock"
+      - "mise/tasks/integration-test"
+      - "tests/runn/**"
+      - ".github/workflows/integration-test.yml"
+  pull_request:
+    paths:
+      - "app/*/src/**"
+      - "app/*/Cargo.toml"
+      - "app/Cargo.toml"
+      - "app/Cargo.lock"
+      - "db/**"
+      - "mise.toml"
+      - "mise.lock"
+      - "mise/tasks/integration-test"
+      - "tests/runn/**"
+      - ".github/workflows/integration-test.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: cicd-sensor
+        uses: cicd-sensor/cicd-sensor-action@2b76335ff1c2dd298e983961f7a200d3fe9076c2 # v0.0.36
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@46268bd060767258de96ed93c1251119784f2ab6 # v1.16.1
+        with:
+          rustflags: ""
+
+      - name: Install mise and setup
+        uses: jdx/mise-action@e6a8b3978addb5a52f2b4cd9d91eafa7f0ab959d # v4.2.0
+        with:
+          install: true
+          install_args: "atlas github:k1LoW/runn"
+          cache: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          MISE_LOCKED: "1"
+
+      - name: Check
+        run: mise run integration-test
