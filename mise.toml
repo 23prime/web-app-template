@@ -22,7 +22,7 @@ atlas = "1.2.3"
 "github:k1LoW/runn" = "v1.9.4"
 
 # Markdown
-markdownlint-cli2 = "0.23.0"
+markdownlint-cli2 = "0.23.1"
 
 # GitHub Actions
 actionlint = "1"
