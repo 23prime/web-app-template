@@ -11,6 +11,7 @@ on:
       - "db/**"
       - "mise.toml"
       - "mise.lock"
+      - "mise/tasks/integration-test"
       - ".github/workflows/check-integration.yml"
   pull_request:
     paths:
@@ -20,6 +21,7 @@ on:
       - "db/**"
       - "mise.toml"
       - "mise.lock"
+      - "mise/tasks/integration-test"
       - ".github/workflows/check-integration.yml"
 
 concurrency:
