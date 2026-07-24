@@ -6,22 +6,26 @@ on:
       - main
     paths:
       - "app/*/src/**"
+      - "app/*/Cargo.toml"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
       - "db/**"
       - "mise.toml"
       - "mise.lock"
       - "mise/tasks/integration-test"
+      - "tests/runn/**"
       - ".github/workflows/integration-test.yml"
   pull_request:
     paths:
       - "app/*/src/**"
+      - "app/*/Cargo.toml"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
       - "db/**"
       - "mise.toml"
       - "mise.lock"
       - "mise/tasks/integration-test"
+      - "tests/runn/**"
       - ".github/workflows/integration-test.yml"
 
 concurrency:
@@ -33,6 +37,7 @@ permissions: {}
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     permissions:
       contents: read
