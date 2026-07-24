@@ -1,4 +1,4 @@
-name: Check integration
+name: Integration test
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - "mise.toml"
       - "mise.lock"
       - "mise/tasks/integration-test"
-      - ".github/workflows/check-integration.yml"
+      - ".github/workflows/integration-test.yml"
   pull_request:
     paths:
       - "app/*/src/**"
@@ -22,7 +22,7 @@ on:
       - "mise.toml"
       - "mise.lock"
       - "mise/tasks/integration-test"
-      - ".github/workflows/check-integration.yml"
+      - ".github/workflows/integration-test.yml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
