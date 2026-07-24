@@ -20,16 +20,20 @@ layer lives in its own crate under `app/<layer>/src`.
 - `presentation` — Actix Web HTTP handlers; maps requests/responses to
   `use_case` calls. Depends on `domain`, `use_case`, and `container`.
 - `container` — holds the `domain` trait objects (e.g. `Arc<dyn UserRepository>`)
-  that `presentation`/`use_case` consume. Depends only on `domain`; it does not
-  know about `infrastructure`.
+  that `presentation` consumes to wire them into use cases. Depends only on
+  `domain`; it does not know about `infrastructure`. `use_case` itself never
+  depends on `container` — it receives domain abstractions directly through
+  its own function signatures.
 - `server` — composition root: picks the concrete `infrastructure`
   implementations, constructs the `container` with them, starts Actix Web, and
   wires middleware. Depends on every other crate.
 
 ## Dependency Rule
 
-- A crate may only depend on crates strictly inside it (closer to `domain`):
-  `domain` ← `use_case` / `infrastructure` / `container` ← `presentation` ← `server`.
+- Allowed dependency edges:
+  - `use_case`, `infrastructure`, `container` → `domain`
+  - `presentation` → `domain`, `use_case`, `container`
+  - `server` → `domain`, `use_case`, `infrastructure`, `presentation`, `container`
 - `domain` must never depend on any other layer.
 - `use_case`, `infrastructure`, and `container` must not depend on each
   other — all three depend only on `domain`, and are connected in `server`,
