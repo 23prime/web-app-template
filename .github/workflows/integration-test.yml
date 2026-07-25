@@ -51,20 +51,20 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install Rust
-        uses: actions-rust-lang/setup-rust-toolchain@46268bd060767258de96ed93c1251119784f2ab6 # v1.16.1
-        with:
-          rustflags: ""
-
       - name: Install mise and setup
         uses: jdx/mise-action@e6a8b3978addb5a52f2b4cd9d91eafa7f0ab959d # v4.2.0
         with:
           install: true
-          install_args: "atlas github:k1LoW/runn"
+          install_args: "rust atlas github:k1LoW/runn"
           cache: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           MISE_LOCKED: "1"
+
+      - name: Rust cache
+        uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v2.9.1
+        with:
+          workspaces: app
 
       - name: Check
         run: mise run integration-test
