@@ -1,0 +1,100 @@
+name: Mutation Testing
+
+on:
+  pull_request:
+    paths:
+      - "app/*/src/**"
+      - "app/Cargo.toml"
+      - "app/Cargo.lock"
+      - "mise.toml"
+      - "mise.lock"
+      - ".github/workflows/mutation-testing.yml"
+  schedule:
+    - cron: "0 0 * * *"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions: {}
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  mutation-testing:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@46268bd060767258de96ed93c1251119784f2ab6 # v1.16.1
+        with:
+          rustflags: ""
+
+      - name: Install mise
+        uses: jdx/mise-action@dba19683ed58901619b14f395a24841710cb4925 # v4.1.0
+        with:
+          install: true
+          cache: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate diff against base branch
+        if: github.event_name == 'pull_request'
+        run: git -C app diff --relative "origin/${GITHUB_BASE_REF}"...HEAD > app/mutants.diff
+
+      - name: Run mutation testing (changed lines only)
+        if: github.event_name == 'pull_request'
+        run: mise run rs-mutants-diff || true
+
+      - name: Run mutation testing (full suite)
+        if: github.event_name == 'schedule'
+        run: mise run rs-mutants || true
+
+      - name: Publish mutation results to Job Summary
+        if: always()
+        run: |
+          if [ ! -f app/mutants.out/outcomes.json ]; then
+            echo "## Mutation Testing" >> "$GITHUB_STEP_SUMMARY"
+            echo "No mutants were tested (e.g. the diff touched no mutable lines)." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          {
+            echo "## Mutation Testing"
+            echo '```'
+            jq -r '"Total: \(.total_mutants)  Caught: \(.caught)  Missed: \(.missed)  Timeout: \(.timeout)  Unviable: \(.unviable)"' app/mutants.out/outcomes.json
+            echo '```'
+            if [ -s app/mutants.out/missed.txt ]; then
+              echo "### Surviving mutants"
+              echo '```'
+              cat app/mutants.out/missed.txt
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Warn on low mutation score
+        if: always()
+        run: |
+          if [ ! -f app/mutants.out/outcomes.json ]; then
+            echo "No outcomes.json; skipping threshold check"
+            exit 0
+          fi
+          caught=$(jq '.caught' app/mutants.out/outcomes.json)
+          missed=$(jq '.missed' app/mutants.out/outcomes.json)
+          tested=$((caught + missed))
+          if [ "${tested}" -eq 0 ]; then
+            echo "No mutants were caught or missed; skipping threshold check"
+            exit 0
+          fi
+          score=$(awk -v c="${caught}" -v t="${tested}" 'BEGIN { printf "%.2f", (c / t) * 100 }')
+          echo "Mutation score: ${score}%"
+          if awk -v s="${score}" 'BEGIN { exit !(s < 80) }'; then
+            echo "::warning::Mutation score ${score}% is below the 80% threshold"
+          fi

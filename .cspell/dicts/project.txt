@@ -25,3 +25,4 @@ getrandom
 argon
 DOTALL
 rustflags
+unviable
