@@ -128,6 +128,10 @@ provenance = "cosign"
 version = "0.8.7"
 backend = "cargo:cargo-llvm-cov"
 
+[[tools."cargo:cargo-mutants"]]
+version = "27.1.0"
+backend = "cargo:cargo-mutants"
+
 [[tools.cspell]]
 version = "10.0.1"
 backend = "npm:cspell"
