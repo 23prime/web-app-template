@@ -20,6 +20,7 @@ atlas = "1.2.0"
 
 # Testing
 "github:k1LoW/runn" = "v1.9.4"
+"cargo:cargo-llvm-cov" = "0.8.7"
 
 # Markdown
 markdownlint-cli2 = "0.23.1"
@@ -141,6 +142,17 @@ run = [
   "cargo test -- --nocapture",
 ]
 alias = "rc"
+dir = "{{vars.app_dir}}"
+
+[tasks.rs-coverage]
+description = "Measure Rust test coverage"
+run = [
+  "cargo llvm-cov clean --workspace",
+  "cargo llvm-cov --workspace --all-features --no-report",
+  "cargo llvm-cov report > coverage-summary.txt",
+  "cat coverage-summary.txt",
+  "cargo llvm-cov report --json --summary-only --output-path coverage.json",
+]
 dir = "{{vars.app_dir}}"
 
 [tasks.rs-run]

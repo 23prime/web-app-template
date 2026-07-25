@@ -93,6 +93,7 @@ mise run db-apply
 | `mise run rs-watch` | `mise run rw` | Run with hot reload (watchexec) |
 | `mise run rs-fix` | `mise run rf` | Fix Rust code (clippy + fmt) |
 | `mise run rs-check` | `mise run rc` | Check Rust code |
+| `mise run rs-coverage` | | Measure test coverage |
 | `mise run rs-build` | | Build the application |
 | `mise run rs-build-release` | | Build in release mode |
 | `mise run rs-clean` | | Clean build artifacts |
