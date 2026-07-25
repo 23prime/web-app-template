@@ -1,1 +1,3 @@
 app/target/
+app/coverage.json
+app/coverage-summary.txt

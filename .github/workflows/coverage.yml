@@ -1,0 +1,71 @@
+name: Coverage
+
+on:
+  push:
+    paths:
+      - "app/*/src/**"
+      - "app/Cargo.toml"
+      - "app/Cargo.lock"
+      - "mise.toml"
+      - ".github/workflows/coverage.yml"
+  pull_request:
+    paths:
+      - "app/*/src/**"
+      - "app/Cargo.toml"
+      - "app/Cargo.lock"
+      - "mise.toml"
+      - ".github/workflows/coverage.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions: {}
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
+
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@46268bd060767258de96ed93c1251119784f2ab6 # v1.16.1
+        with:
+          components: llvm-tools
+          rustflags: ""
+
+      - name: Install mise
+        uses: jdx/mise-action@dba19683ed58901619b14f395a24841710cb4925 # v4.1.0
+        with:
+          install: true
+          cache: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Measure coverage
+        run: mise run rs-coverage
+
+      - name: Publish coverage to Job Summary
+        run: |
+          {
+            echo "## Coverage"
+            echo '```'
+            cat app/coverage-summary.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Warn on low coverage
+        run: |
+          percent=$(jq '.data[0].totals.lines.percent' app/coverage.json)
+          echo "Line coverage: ${percent}%"
+          if awk -v p="$percent" 'BEGIN { exit !(p < 90) }'; then
+            echo "::warning::Line coverage ${percent}% is below the 90% threshold"
+          fi

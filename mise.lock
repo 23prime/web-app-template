@@ -124,6 +124,10 @@ url = "https://github.com/betterleaks/betterleaks/releases/download/v1.6.1/bette
 url_api = "https://api.github.com/repos/betterleaks/betterleaks/releases/assets/462264905"
 provenance = "cosign"
 
+[[tools."cargo:cargo-llvm-cov"]]
+version = "0.8.7"
+backend = "cargo:cargo-llvm-cov"
+
 [[tools.cspell]]
 version = "10.0.1"
 backend = "npm:cspell"
