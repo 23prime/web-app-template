@@ -35,7 +35,7 @@ Both files are gitignored.
 `cargo-llvm-cov` needs the `llvm-tools` rustup component. Locally:
 
 ```bash
-rustup component add llvm-tools-preview
+rustup component add llvm-tools
 ```
 
 CI installs it automatically via `actions-rust-lang/setup-rust-toolchain`'s `components: llvm-tools`.
