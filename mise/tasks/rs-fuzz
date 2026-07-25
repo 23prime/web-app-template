@@ -10,6 +10,14 @@ fi
 target="$1"
 seconds="$2"
 
+case "${target}" in
+  create_user_input | login_input) ;;
+  *)
+    echo "target must be create_user_input or login_input, got: ${target}" >&2
+    exit 1
+    ;;
+esac
+
 if ! [[ "${seconds}" =~ ^[1-9][0-9]*$ ]]; then
   echo "seconds must be a positive integer, got: ${seconds}" >&2
   exit 1
