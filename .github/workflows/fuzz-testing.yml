@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "app/*/src/**"
+      - "app/*/Cargo.toml"
       - "app/use_case/fuzz/**"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
