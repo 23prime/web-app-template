@@ -26,5 +26,4 @@ argon
 DOTALL
 rustflags
 unviable
-libfuzzer
 esac
