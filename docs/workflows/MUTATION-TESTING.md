@@ -66,8 +66,8 @@ from the score, since they don't indicate a test gap.
 
 Steps:
 
-1. On `pull_request`: diff against the base branch (`git diff
-   origin/$GITHUB_BASE_REF...HEAD -- app`) and run `mise run rs-mutants-diff`.
+1. On `pull_request`: diff against the base branch (`git -C app diff --relative
+   origin/$GITHUB_BASE_REF...HEAD`) and run `mise run rs-mutants-diff`.
    On `schedule`: run `mise run rs-mutants`.
 2. Append `app/mutants.out/outcomes.json`'s summary and `missed.txt`'s
    contents to the GitHub Actions Job Summary.

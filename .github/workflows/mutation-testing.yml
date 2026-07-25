@@ -52,11 +52,23 @@ jobs:
 
       - name: Run mutation testing (changed lines only)
         if: github.event_name == 'pull_request'
-        run: mise run rs-mutants-diff || true
+        run: |
+          mise run rs-mutants-diff
+          code=$?
+          if [ "${code}" -ne 0 ] && [ "${code}" -ne 2 ]; then
+            echo "::warning::cargo-mutants exited with unexpected code ${code} (see logs above); results below may be incomplete"
+          fi
+          exit 0
 
       - name: Run mutation testing (full suite)
         if: github.event_name == 'schedule'
-        run: mise run rs-mutants || true
+        run: |
+          mise run rs-mutants
+          code=$?
+          if [ "${code}" -ne 0 ] && [ "${code}" -ne 2 ]; then
+            echo "::warning::cargo-mutants exited with unexpected code ${code} (see logs above); results below may be incomplete"
+          fi
+          exit 0
 
       - name: Publish mutation results to Job Summary
         if: always()
