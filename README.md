@@ -96,7 +96,6 @@ mise run db-apply
 | `mise run rs-coverage` | | Measure test coverage |
 | `mise run rs-mutants` | | Run mutation testing (full suite) |
 | `mise run rs-mutants-diff` | | Run mutation testing (changed lines only) |
-| `mise run rs-fuzz -- <target> <seconds>` | | Run a fuzz target for a bounded duration |
 | `mise run rs-build` | | Build the application |
 | `mise run rs-build-release` | | Build in release mode |
 | `mise run rs-clean` | | Clean build artifacts |
