@@ -27,6 +27,7 @@ graph TB
     server --> container
     server --> infrastructure
     server --> presentation
+    server --> use_case
     container --> domain
     infrastructure --> domain
     presentation --> container
@@ -76,6 +77,14 @@ mise run db-apply
 
 ### Commands
 
+Every tool in this project is wrapped in a mise task. Run `mise run <task>`
+rather than invoking `cargo`, `markdownlint-cli2`, `sqruff`, `atlas`, or
+`docker compose` directly, so everyone — and CI — runs the same command with
+the same options. After editing files, run `mise run fix` and then
+`mise run check` (`mise run rs-fix` / `mise run rs-check` for Rust-only
+changes). The tables below cover the tasks used day to day; `mise tasks` lists
+all of them, including the per-tool lint and check tasks.
+
 | Command | Alias | Description |
 | --- | --- | --- |
 | `mise run dev` | `mise run d` | Start all development services |
@@ -123,6 +132,11 @@ mise run db-apply
 | --- | --- | --- |
 | `mise run integration-test` | `mise run it` | Run integration tests |
 | `mise run seed` | | Seed the database (ENV=local) |
+
+## Documentation
+
+Detailed documentation lives in [docs/](docs): using this template, validation,
+testing, coverage, mutation testing, and CI conventions.
 
 ## Contributing
 

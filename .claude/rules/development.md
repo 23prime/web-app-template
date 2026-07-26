@@ -5,6 +5,8 @@ description: mise task usage rules for this repository
 
 # Development
 
+> Comprehensive documentation: [README.md](../../README.md#development)
+
 ## Use mise Tasks — Required, Not Optional
 
 - Never invoke the underlying tools directly (`cargo`, `markdownlint-cli2`, `sqruff`, `atlas`, `docker compose`, etc.). Always run the equivalent `mise run <task>` command instead.
