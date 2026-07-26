@@ -33,6 +33,18 @@ never state something the documentation contradicts.
 Name files under `docs/` in lowercase kebab-case (`template-usage.md`), except
 `CONTRIBUTING.md`, which keeps the uppercase name GitHub recognizes.
 
+When documenting a repository-wide convention, write it as an instruction to
+follow ("scope `install_args` when adding a workflow"), not as a claim about
+the current state ("every workflow scopes `install_args`"). A descriptive
+claim is false the moment one file does not comply, and verifying every
+instance is rarely worth the effort.
+
+Do not put real pinned commit SHAs or versions in Markdown examples — write
+`@<full-commit-sha> # <version>` instead. Renovate updates workflow YAML, not
+documentation, so a real SHA in a document goes stale without anything
+flagging it. This does not change how workflow files themselves are written;
+they still pin to a real SHA.
+
 Rules:
 
 - `.claude/rules/architecture.md` — Onion architecture layers and the allowed
