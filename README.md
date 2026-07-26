@@ -64,7 +64,6 @@ graph TB
 ### Pre-requirements
 
 - [mise](https://mise.jdx.dev)
-- [rustup](https://rustup.rs)
 - [Docker](https://www.docker.com) (with Compose)
 
 ### Setup

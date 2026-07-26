@@ -6,12 +6,16 @@ on:
       - "app/*/src/**"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
+      - "mise.toml"
+      - "mise.lock"
       - ".github/workflows/check-rust.yml"
   pull_request:
     paths:
       - "app/*/src/**"
       - "app/Cargo.toml"
       - "app/Cargo.lock"
+      - "mise.toml"
+      - "mise.lock"
       - ".github/workflows/check-rust.yml"
 
 concurrency:
@@ -35,18 +39,18 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install Rust
-        uses: actions-rust-lang/setup-rust-toolchain@46268bd060767258de96ed93c1251119784f2ab6 # v1.16.1
-        with:
-          components: rustfmt, clippy
-          rustflags: ""
-
       - name: Install mise
         uses: jdx/mise-action@dba19683ed58901619b14f395a24841710cb4925 # v4.1.0
         with:
-          install: false
+          install: true
+          install_args: "rust"
           cache: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rust cache
+        uses: Swatinem/rust-cache@c19371144df3bb44fab255c43d04cbc2ab54d1c4 # v2.9.1
+        with:
+          workspaces: app
 
       - name: Fix
         run: mise run rs-fix

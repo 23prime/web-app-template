@@ -27,3 +27,4 @@ DOTALL
 rustflags
 unviable
 esac
+Swatinem

@@ -32,13 +32,8 @@ Both files are gitignored.
 
 ## Requirement: `llvm-tools` Component
 
-`cargo-llvm-cov` needs the `llvm-tools` rustup component. Locally:
-
-```bash
-rustup component add llvm-tools
-```
-
-CI installs it automatically via `actions-rust-lang/setup-rust-toolchain`'s `components: llvm-tools`.
+`cargo-llvm-cov` needs the `llvm-tools` rustup component. It is declared in `mise.toml`'s
+`rust` tool `components`, so `mise install` provisions it both locally and in CI.
 
 ## CI Workflow
 

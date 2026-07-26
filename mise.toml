@@ -14,6 +14,9 @@ minimum_release_age = "3d"
 # Node.js
 node = "26"
 
+# Rust
+rust = { version = "1.97.1", profile = "minimal", components = "rustfmt,clippy,llvm-tools" }
+
 # Database
 atlas = "1.2.0"
 "github:quarylabs/sqruff" = "0.38"
