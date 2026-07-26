@@ -5,10 +5,12 @@ description: Onion architecture layers and dependency rules for the app/ workspa
 
 # Architecture
 
-This project follows the Onion architecture. `app/` is a Cargo workspace; each
-layer lives in its own crate under `app/<layer>/src`.
+> Comprehensive documentation: [README.md](../../README.md#architecture)
 
-## Layers and Responsibilities
+This project follows the Onion architecture. `app/` is a Cargo workspace; each
+crate lives under `app/<crate>/src`.
+
+## Crates and Responsibilities
 
 - `domain` — entities, value objects, domain errors, and repository trait
   definitions (e.g. `UserRepository` in `domain/src/user.rs`). No dependency
@@ -26,18 +28,23 @@ layer lives in its own crate under `app/<layer>/src`.
   its own function signatures.
 - `server` — composition root: picks the concrete `infrastructure`
   implementations, constructs the `container` with them, starts Actix Web, and
-  wires middleware. Depends on every other crate.
+  wires middleware. Depends on `use_case`, `infrastructure`, `presentation`,
+  and `container`.
+- `seeder` — standalone binary that seeds the database with initial data. Not
+  part of the request path; depends on `domain` and `infrastructure`.
 
 ## Dependency Rule
 
 - Allowed dependency edges:
   - `use_case`, `infrastructure`, `container` → `domain`
   - `presentation` → `domain`, `use_case`, `container`
-  - `server` → `domain`, `use_case`, `infrastructure`, `presentation`, `container`
+  - `server` → `use_case`, `infrastructure`, `presentation`, `container`
+  - `seeder` → `domain`, `infrastructure`
 - `domain` must never depend on any other layer.
 - `use_case`, `infrastructure`, and `container` must not depend on each
-  other — all three depend only on `domain`, and are connected in `server`,
-  which is the only crate that references concrete `infrastructure` types.
+  other — all three depend only on `domain`, and are connected in `server`.
+  `server` and `seeder` are the only crates that reference concrete
+  `infrastructure` types.
 - New cross-layer trait implementations belong in `infrastructure`; new
   application logic belongs in `use_case`; new business rules and types belong
   in `domain`.

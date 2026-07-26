@@ -5,6 +5,8 @@ description: Unit vs integration test classification and where to write each
 
 # Testing
 
+> Comprehensive documentation: [docs/testing.md](../../docs/testing.md)
+
 This project uses two test types. Pick the type based on what you're
 verifying, not on convenience.
 
