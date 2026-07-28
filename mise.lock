@@ -157,6 +157,7 @@ checksum = "sha256:ccdbb6338223e3fa61f0a4da992fcdb55a562955b6a5c72b45063bea4cee5
 url = "https://github.com/k1LoW/runn/releases/download/v1.9.4/runn_v1.9.4_linux_amd64.tar.gz"
 url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/461714486"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools."github:k1LoW/runn"."platforms.linux-x64-musl"]
 checksum = "sha256:ccdbb6338223e3fa61f0a4da992fcdb55a562955b6a5c72b45063bea4cee50a2"
@@ -203,6 +204,7 @@ checksum = "sha256:d96a06daca2a214eb0b6c07b2821e9cdb1379086041bcca6f8bab031b6eb8
 url = "https://github.com/quarylabs/sqruff/releases/download/v0.38.0/sqruff-linux-x86_64-musl.tar.gz"
 url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/394883913"
 provenance = "github-attestations"
+provenance_verified = true
 
 [tools."github:quarylabs/sqruff"."platforms.linux-x64-musl"]
 checksum = "sha256:d96a06daca2a214eb0b6c07b2821e9cdb1379086041bcca6f8bab031b6eb8026"
