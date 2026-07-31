@@ -27,7 +27,7 @@ atlas = "1.2.3"
 "cargo:cargo-mutants" = "27.1.0"
 
 # Markdown
-markdownlint-cli2 = "0.23.1"
+markdownlint-cli2 = "0.23.2"
 
 # GitHub Actions
 actionlint = "1"
