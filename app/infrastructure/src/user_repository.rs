@@ -51,32 +51,38 @@ fn collect_user(rows: Vec<UserWithCredentialRow>) -> Result<Option<User>, UserEr
     }))
 }
 
-const JOIN_SQL: &str = "
+const FIND_BY_ID_SQL: &str = "
     SELECT u.id, u.name, u.email, u.created_at,
            c.password_hash, c.created_at AS credential_created_at
     FROM users u
-    LEFT JOIN credentials c ON c.user_id = u.id";
+    LEFT JOIN credentials c ON c.user_id = u.id
+    WHERE u.id = $1";
+
+const FIND_BY_EMAIL_SQL: &str = "
+    SELECT u.id, u.name, u.email, u.created_at,
+           c.password_hash, c.created_at AS credential_created_at
+    FROM users u
+    LEFT JOIN credentials c ON c.user_id = u.id
+    WHERE u.email = $1";
 
 #[async_trait]
 impl UserRepository for PgUserRepository {
     async fn find_by_id(&self, id: &UserId) -> Result<Option<User>, UserError> {
-        let rows =
-            sqlx::query_as::<_, UserWithCredentialRow>(&format!("{JOIN_SQL} WHERE u.id = $1"))
-                .bind(id.0)
-                .fetch_all(&self.pool)
-                .await
-                .map_err(|e| UserError::Unexpected(e.to_string()))?;
+        let rows = sqlx::query_as::<_, UserWithCredentialRow>(FIND_BY_ID_SQL)
+            .bind(id.0)
+            .fetch_all(&self.pool)
+            .await
+            .map_err(|e| UserError::Unexpected(e.to_string()))?;
 
         collect_user(rows)
     }
 
     async fn find_by_email(&self, email: &str) -> Result<Option<User>, UserError> {
-        let rows =
-            sqlx::query_as::<_, UserWithCredentialRow>(&format!("{JOIN_SQL} WHERE u.email = $1"))
-                .bind(email)
-                .fetch_all(&self.pool)
-                .await
-                .map_err(|e| UserError::Unexpected(e.to_string()))?;
+        let rows = sqlx::query_as::<_, UserWithCredentialRow>(FIND_BY_EMAIL_SQL)
+            .bind(email)
+            .fetch_all(&self.pool)
+            .await
+            .map_err(|e| UserError::Unexpected(e.to_string()))?;
 
         collect_user(rows)
     }
