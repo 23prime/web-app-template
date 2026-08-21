@@ -184,50 +184,50 @@ url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/461714514"
 provenance = "github-attestations"
 
 [[tools."github:quarylabs/sqruff"]]
-version = "0.39.0"
+version = "0.40.0"
 backend = "github:quarylabs/sqruff"
 
 [tools."github:quarylabs/sqruff"."platforms.linux-arm64"]
-checksum = "sha256:51508afb71d1139f63e757a3aefe0548591d993d4a246bcd0fcf3605553be7f5"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-linux-aarch64-musl.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465487042"
+checksum = "sha256:b1e4ba8f1da96b9a626e8b6ce208e4d94ca13d44a755790a89cc8193f00ee138"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-linux-aarch64-musl.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514422444"
 provenance = "github-attestations"
 
 [tools."github:quarylabs/sqruff"."platforms.linux-arm64-musl"]
-checksum = "sha256:51508afb71d1139f63e757a3aefe0548591d993d4a246bcd0fcf3605553be7f5"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-linux-aarch64-musl.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465487042"
+checksum = "sha256:b1e4ba8f1da96b9a626e8b6ce208e4d94ca13d44a755790a89cc8193f00ee138"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-linux-aarch64-musl.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514422444"
 provenance = "github-attestations"
 
 [tools."github:quarylabs/sqruff"."platforms.linux-x64"]
-checksum = "sha256:5d5ad0d1a9c9db870fb96ce80556001f809505e152101df4a5252cacca2014dc"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-linux-x86_64-musl.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465484175"
+checksum = "sha256:8a377bdfdfaf46483c33cce46d3b4eb46bcec4b9557f6d0106adc85cc926660e"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-linux-x86_64-musl.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514421145"
 provenance = "github-attestations"
 provenance_verified = true
 
 [tools."github:quarylabs/sqruff"."platforms.linux-x64-musl"]
-checksum = "sha256:5d5ad0d1a9c9db870fb96ce80556001f809505e152101df4a5252cacca2014dc"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-linux-x86_64-musl.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465484175"
+checksum = "sha256:8a377bdfdfaf46483c33cce46d3b4eb46bcec4b9557f6d0106adc85cc926660e"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-linux-x86_64-musl.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514421145"
 provenance = "github-attestations"
 
 [tools."github:quarylabs/sqruff"."platforms.macos-arm64"]
-checksum = "sha256:88910104b048f7d434e28407ca306e00756ecbecac40436bafce4bc0a32a90d3"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-darwin-aarch64.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465475324"
+checksum = "sha256:b7ddf7a52d13023a6bdac6ef0999ca5d0f8ed3a5dd7f935da21d06dab2457ea2"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-darwin-aarch64.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514427685"
 provenance = "github-attestations"
 
 [tools."github:quarylabs/sqruff"."platforms.macos-x64"]
-checksum = "sha256:e0c873b14ffdeb934ec20770de1066ce4bc9c877a37287031bb57db37caa18c5"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-darwin-x86_64.tar.gz"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465473441"
+checksum = "sha256:56c75d61a668da1907e68ca92b200efe4f93fa24e6cdc02b7c5cbe286025555c"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-darwin-x86_64.tar.gz"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514434265"
 provenance = "github-attestations"
 
 [tools."github:quarylabs/sqruff"."platforms.windows-x64"]
-checksum = "sha256:3c3c3e0c0924e0a38fe75d99d7fd40ca6ba5d9701cbfbe7caa8b92e6930c9c43"
-url = "https://github.com/quarylabs/sqruff/releases/download/v0.39.0/sqruff-windows-x86_64.zip"
-url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/465478191"
+checksum = "sha256:f60f5d2f98c6b170d319cda71e53379653bc4dfa2ef5ded1551e57fe918782fa"
+url = "https://github.com/quarylabs/sqruff/releases/download/v0.40.0/sqruff-windows-x86_64.zip"
+url_api = "https://api.github.com/repos/quarylabs/sqruff/releases/assets/514428448"
 provenance = "github-attestations"
 
 [[tools.lefthook]]

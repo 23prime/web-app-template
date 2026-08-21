@@ -19,7 +19,7 @@ rust = { version = "1.97.1", profile = "minimal", components = "rustfmt,clippy,l
 
 # Database
 atlas = "1.3.0"
-"github:quarylabs/sqruff" = "v0.39.0"
+"github:quarylabs/sqruff" = "v0.40.0"
 
 # Testing
 "github:k1LoW/runn" = "v1.9.4"
