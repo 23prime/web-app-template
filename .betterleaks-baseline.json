@@ -1,0 +1,522 @@
+[
+ {
+  "RuleID": "generic-credential-uri",
+  "Description": "Detected a password embedded in a service connection URI, which may expose direct access to the referenced service.",
+  "StartLine": 27,
+  "EndLine": 27,
+  "StartColumn": 17,
+  "EndColumn": 76,
+  "Match": "postgres://postgres:password@localhost:5432/app_development\"",
+  "Secret": "password",
+  "CaptureGroups": {
+   "host": "localhost",
+   "password": "password",
+   "scheme": "postgres",
+   "uri": "postgres://postgres:password@localhost:5432/app_development",
+   "username": "postgres"
+  },
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-22T09:54:16Z",
+   "git.message": "chore: Add Atlas migration tooling and initial users migration",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "357993a3b16c1c513522f0032cedbcaded004322",
+   "path": "mise.toml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/357993a3b16c1c513522f0032cedbcaded004322/mise.toml#L27"
+  },
+  "Tags": [],
+  "Fingerprint": "357993a3b16c1c513522f0032cedbcaded004322:mise.toml:generic-credential-uri:27",
+  "File": "mise.toml",
+  "SymlinkFile": "",
+  "Commit": "357993a3b16c1c513522f0032cedbcaded004322",
+  "Entropy": 2.75,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-22T09:54:16Z",
+  "Message": "chore: Add Atlas migration tooling and initial users migration"
+ },
+ {
+  "RuleID": "generic-credential-uri",
+  "Description": "Detected a password embedded in a service connection URI, which may expose direct access to the referenced service.",
+  "StartLine": 27,
+  "EndLine": 27,
+  "StartColumn": 17,
+  "EndColumn": 92,
+  "Match": "postgres://postgres:password@localhost:5432/app_development?sslmode=disable\"",
+  "Secret": "password",
+  "CaptureGroups": {
+   "host": "localhost",
+   "password": "password",
+   "scheme": "postgres",
+   "uri": "postgres://postgres:password@localhost:5432/app_development?sslmode=disable",
+   "username": "postgres"
+  },
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-22T10:14:52Z",
+   "git.message": "chore: Add db tasks and fix Atlas config path and SSL mode",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "34cc90754142b416665724f48bd45dfc0a4b42ab",
+   "path": "mise.toml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/34cc90754142b416665724f48bd45dfc0a4b42ab/mise.toml#L27"
+  },
+  "Tags": [],
+  "Fingerprint": "34cc90754142b416665724f48bd45dfc0a4b42ab:mise.toml:generic-credential-uri:27",
+  "File": "mise.toml",
+  "SymlinkFile": "",
+  "Commit": "34cc90754142b416665724f48bd45dfc0a4b42ab",
+  "Entropy": 2.75,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-22T10:14:52Z",
+  "Message": "chore: Add db tasks and fix Atlas config path and SSL mode"
+ },
+ {
+  "RuleID": "generic-credential-uri",
+  "Description": "Detected a password embedded in a service connection URI, which may expose direct access to the referenced service.",
+  "StartLine": 31,
+  "EndLine": 31,
+  "StartColumn": 21,
+  "EndColumn": 89,
+  "Match": "postgres://postgres:password@localhost:5432/postgres?sslmode=disable\"",
+  "Secret": "password",
+  "CaptureGroups": {
+   "host": "localhost",
+   "password": "password",
+   "scheme": "postgres",
+   "uri": "postgres://postgres:password@localhost:5432/postgres?sslmode=disable",
+   "username": "postgres"
+  },
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-22T12:10:54Z",
+   "git.message": "refactor: Switch Atlas from versioned migrations to declarative schema management",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "2a2f8d58af34088d7c4adce247a5b243919dc462",
+   "path": "mise.toml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/2a2f8d58af34088d7c4adce247a5b243919dc462/mise.toml#L31"
+  },
+  "Tags": [],
+  "Fingerprint": "2a2f8d58af34088d7c4adce247a5b243919dc462:mise.toml:generic-credential-uri:31",
+  "File": "mise.toml",
+  "SymlinkFile": "",
+  "Commit": "2a2f8d58af34088d7c4adce247a5b243919dc462",
+  "Entropy": 2.75,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-22T12:10:54Z",
+  "Message": "refactor: Switch Atlas from versioned migrations to declarative schema management"
+ },
+ {
+  "RuleID": "generic-credential-uri",
+  "Description": "Detected a password embedded in a service connection URI, which may expose direct access to the referenced service.",
+  "StartLine": 33,
+  "EndLine": 33,
+  "StartColumn": 22,
+  "EndColumn": 90,
+  "Match": "postgres://postgres:password@localhost:5432/app_test?sslmode=disable\"",
+  "Secret": "password",
+  "CaptureGroups": {
+   "host": "localhost",
+   "password": "password",
+   "scheme": "postgres",
+   "uri": "postgres://postgres:password@localhost:5432/app_test?sslmode=disable",
+   "username": "postgres"
+  },
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-22T13:18:46Z",
+   "git.message": "chore: Use separate app_test database for integration tests",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "f5a8651f26965b8927c1767f39c84c5e4d729a46",
+   "path": "mise.toml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/f5a8651f26965b8927c1767f39c84c5e4d729a46/mise.toml#L33"
+  },
+  "Tags": [],
+  "Fingerprint": "f5a8651f26965b8927c1767f39c84c5e4d729a46:mise.toml:generic-credential-uri:33",
+  "File": "mise.toml",
+  "SymlinkFile": "",
+  "Commit": "f5a8651f26965b8927c1767f39c84c5e4d729a46",
+  "Entropy": 2.75,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-22T13:18:46Z",
+  "Message": "chore: Use separate app_test database for integration tests"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 14,
+  "EndLine": 14,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/users.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/users.yml#L14"
+  },
+  "Tags": [],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/users.yml:generic-password:14",
+  "File": "tests/runn/users.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 33,
+  "EndLine": 33,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/users.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/users.yml#L33"
+  },
+  "Tags": [],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/users.yml:generic-password:33",
+  "File": "tests/runn/users.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 92,
+  "EndLine": 92,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-07-26T06:50:02Z",
+   "git.message": "docs: Separate comprehensive docs from distilled agent rules\n\nREADME and docs/ hold the comprehensive documentation; .claude/rules/ holds\nthe distilled instructions for agents, each linking to its counterpart. Add\nthe missing CI and testing documentation so no rule is left without one, and\nflatten docs/workflows/ into docs/ with lowercase kebab-case filenames, since\nthe directory name collided with .github/workflows/.",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "a67f1720895f7857cf925f6edd55de64e8cc0130",
+   "path": "docs/testing.md",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/a67f1720895f7857cf925f6edd55de64e8cc0130/docs/testing.md?plain=1#L92"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 91,
+      "EndLine": 91,
+      "StartColumn": 14,
+      "EndColumn": 36,
+      "Match": " email: bob@example.com",
+      "Secret": "bob@example.com"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "a67f1720895f7857cf925f6edd55de64e8cc0130:docs/testing.md:generic-password:92",
+  "File": "docs/testing.md",
+  "SymlinkFile": "",
+  "Commit": "a67f1720895f7857cf925f6edd55de64e8cc0130",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-07-26T06:50:02Z",
+  "Message": "docs: Separate comprehensive docs from distilled agent rules\n\nREADME and docs/ hold the comprehensive documentation; .claude/rules/ holds\nthe distilled instructions for agents, each linking to its counterpart. Add\nthe missing CI and testing documentation so no rule is left without one, and\nflatten docs/workflows/ into docs/ with lowercase kebab-case filenames, since\nthe directory name collided with .github/workflows/."
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 6,
+  "EndLine": 6,
+  "StartColumn": 16,
+  "EndColumn": 33,
+  "Match": "PASSWORD: password",
+  "Secret": "password",
+  "Attributes": {
+   "confidence": "medium",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-22T10:14:33Z",
+   "git.message": "chore: Add Docker Compose service for PostgreSQL",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "4b34036443135fa41f84e57ddb326d1fc5822af6",
+   "path": "compose.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/4b34036443135fa41f84e57ddb326d1fc5822af6/compose.yml#L6"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 5,
+      "EndLine": 5,
+      "StartColumn": 15,
+      "EndColumn": 29,
+      "Match": "_USER: postgres",
+      "Secret": "postgres"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "4b34036443135fa41f84e57ddb326d1fc5822af6:compose.yml:generic-password:6",
+  "File": "compose.yml",
+  "SymlinkFile": "",
+  "Commit": "4b34036443135fa41f84e57ddb326d1fc5822af6",
+  "Entropy": 2.75,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-22T10:14:33Z",
+  "Message": "chore: Add Docker Compose service for PostgreSQL"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 14,
+  "EndLine": 14,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/auth.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/auth.yml#L14"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 13,
+      "EndLine": 13,
+      "StartColumn": 14,
+      "EndColumn": 36,
+      "Match": " email: bob@example.com",
+      "Secret": "bob@example.com"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/auth.yml:generic-password:14",
+  "File": "tests/runn/auth.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 25,
+  "EndLine": 25,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/auth.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/auth.yml#L25"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 24,
+      "EndLine": 24,
+      "StartColumn": 14,
+      "EndColumn": 36,
+      "Match": " email: bob@example.com",
+      "Secret": "bob@example.com"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/auth.yml:generic-password:25",
+  "File": "tests/runn/auth.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 36,
+  "EndLine": 36,
+  "StartColumn": 15,
+  "EndColumn": 38,
+  "Match": "password: wrong_password",
+  "Secret": "wrong_password",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/auth.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/auth.yml#L36"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 35,
+      "EndLine": 35,
+      "StartColumn": 14,
+      "EndColumn": 36,
+      "Match": " email: bob@example.com",
+      "Secret": "bob@example.com"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/auth.yml:generic-password:36",
+  "File": "tests/runn/auth.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2359264,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ },
+ {
+  "RuleID": "generic-password",
+  "Description": "Detected a potential hardcoded password literal, which may expose account credentials.",
+  "StartLine": 47,
+  "EndLine": 47,
+  "StartColumn": 15,
+  "EndColumn": 35,
+  "Match": "password: password123",
+  "Secret": "password123",
+  "Attributes": {
+   "confidence": "low",
+   "git.author_email": "23.prime.37@gmail.com",
+   "git.author_name": "23prime",
+   "git.date": "2026-02-23T09:40:01Z",
+   "git.message": "test: add auth integration tests and update users tests for password field",
+   "git.platform": "github",
+   "git.remote_url": "https://github.com/23prime/web-app-template",
+   "git.sha": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+   "path": "tests/runn/auth.yml",
+   "resource": "git.patch_content",
+   "url": "https://github.com/23prime/web-app-template/blob/dc5cae2e7798440888c7b934c4af5b347fb60863/tests/runn/auth.yml#L47"
+  },
+  "Tags": [],
+  "ComponentSets": [
+   {
+    "components": [
+     {
+      "RuleID": "generic-username",
+      "Optional": true,
+      "StartLine": 46,
+      "EndLine": 46,
+      "StartColumn": 14,
+      "EndColumn": 40,
+      "Match": " email: unknown@example.com",
+      "Secret": "unknown@example.com"
+     }
+    ]
+   }
+  ],
+  "Fingerprint": "dc5cae2e7798440888c7b934c4af5b347fb60863:tests/runn/auth.yml:generic-password:47",
+  "File": "tests/runn/auth.yml",
+  "SymlinkFile": "",
+  "Commit": "dc5cae2e7798440888c7b934c4af5b347fb60863",
+  "Entropy": 3.2776134,
+  "Author": "23prime",
+  "Email": "23.prime.37@gmail.com",
+  "Date": "2026-02-23T09:40:01Z",
+  "Message": "test: add auth integration tests and update users tests for password field"
+ }
+]

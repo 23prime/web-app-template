@@ -247,12 +247,12 @@ dir = "{{vars.app_dir}}"
 # Secrets
 [tasks.secret-check]
 description = "Check staged files for leaked secrets"
-run = "betterleaks git --pre-commit --redact --no-banner"
+run = "betterleaks git --pre-commit --redact --no-banner --baseline-path .betterleaks-baseline.json"
 alias = "scc"
 
 [tasks.secret-check-all]
 description = "Check for leaked secrets"
-run = "betterleaks git --redact --no-banner"
+run = "betterleaks git --redact --no-banner --baseline-path .betterleaks-baseline.json"
 alias = "sca"
 
 # mise lock
