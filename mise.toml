@@ -15,7 +15,7 @@ minimum_release_age = "3d"
 node = "26"
 
 # Rust
-rust = { version = "1.97.1", profile = "minimal", components = "rustfmt,clippy,llvm-tools" }
+rust = { version = "1.98.0", profile = "minimal", components = "rustfmt,clippy,llvm-tools" }
 
 # Database
 atlas = "1.3.0"
@@ -36,7 +36,7 @@ zizmor = "1.29.0"
 
 # Git
 lefthook = "2.1.11"
-betterleaks = "v1.7.4"
+betterleaks = "v1.8.1"
 
 # Spell Check
 cspell = "10"
@@ -247,12 +247,12 @@ dir = "{{vars.app_dir}}"
 # Secrets
 [tasks.secret-check]
 description = "Check staged files for leaked secrets"
-run = "betterleaks git --pre-commit --redact --no-banner"
+run = "betterleaks git --pre-commit --redact --no-banner --baseline-path .betterleaks-baseline.json"
 alias = "scc"
 
 [tasks.secret-check-all]
 description = "Check for leaked secrets"
-run = "betterleaks git --redact --no-banner"
+run = "betterleaks git --redact --no-banner --baseline-path .betterleaks-baseline.json"
 alias = "sca"
 
 # mise lock
