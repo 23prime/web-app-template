@@ -18,3 +18,8 @@ paths: ".github/workflows/**"
 - For Rust source changes, use `app/*/src/**`, not `app/src/**`. Each crate has its own subdirectory (`app/server/src`, `app/domain/src`, etc.); there is no `app/src/`.
 - `app/src/**` matches nothing, so the trigger is silently disabled — the workflow never runs and nothing reports an error.
 - Include the workflow's own file in its `paths:` filter so changes to it are validated.
+
+## Scope `push` Triggers to `main`
+
+- Give a workflow's `push` trigger a `branches:` filter restricting it to `main` unless it has a specific reason not to (e.g. a no-op workflow meant to satisfy required status checks on every branch).
+- `pull_request` already covers topic branches, so an unscoped `push` trigger duplicates that work on every push to every branch instead of only on merge to `main`.

@@ -105,6 +105,25 @@ on:
 workflow simply never runs, and nothing reports an error. Include the
 workflow's own file in the filter so changes to it are validated.
 
+## Scope `push` Triggers to `main`
+
+Give a workflow's `push` trigger a `branches:` filter restricting it to `main` unless it has a
+specific reason not to:
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "app/*/src/**"
+```
+
+`pull_request` already covers topic branches, so an unscoped `push` trigger runs the workflow
+again on every push to every branch instead of only on merge to `main`. A workflow whose whole
+purpose is to run unconditionally — `check-empty.yml` satisfies required status checks that way
+— is the kind of exception that justifies leaving `branches` off.
+
 ## Fix, Then Check
 
 Lint workflows run the auto-fix task, push whatever it changed, and only then
