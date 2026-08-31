@@ -2,7 +2,7 @@ use std::sync::Arc;
 
 use argon2::{
     Argon2,
-    password_hash::{PasswordHash, PasswordHasher, PasswordVerifier, SaltString, rand_core::OsRng},
+    password_hash::{PasswordHasher, PasswordVerifier, phc::PasswordHash},
 };
 use async_trait::async_trait;
 use chrono::{DateTime, Utc};
@@ -35,9 +35,8 @@ impl std::fmt::Debug for PasswordCredential {
 
 impl PasswordCredential {
     pub fn new(password: &str) -> Result<Self, UserError> {
-        let salt = SaltString::generate(&mut OsRng);
         let password_hash = Argon2::default()
-            .hash_password(password.as_bytes(), &salt)
+            .hash_password(password.as_bytes())
             .map_err(|e| UserError::Unexpected(e.to_string()))?
             .to_string();
         Ok(Self {
