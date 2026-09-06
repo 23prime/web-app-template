@@ -15,7 +15,7 @@ minimum_release_age = "3d"
 node = "26"
 
 # Rust
-rust = { version = "1.98.0", profile = "minimal", components = "rustfmt,clippy,llvm-tools" }
+rust = { version = "1.98.1", profile = "minimal", components = "rustfmt,clippy,llvm-tools" }
 
 # Database
 atlas = "1.3.0"
