@@ -133,7 +133,7 @@ version = "27.1.0"
 backend = "cargo:cargo-mutants"
 
 [[tools.cspell]]
-version = "10.3.0"
+version = "10.3.3"
 backend = "npm:cspell"
 
 [[tools."github:k1LoW/runn"]]
