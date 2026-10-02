@@ -137,49 +137,49 @@ version = "10.3.3"
 backend = "npm:cspell"
 
 [[tools."github:k1LoW/runn"]]
-version = "1.11.0"
+version = "1.11.1"
 backend = "github:k1LoW/runn"
 
 [tools."github:k1LoW/runn"."platforms.linux-arm64"]
-checksum = "sha256:bee6ac9d8398e0eefdbb72858bffc86ab14a4aa674545ca6b3a31923f5f4669a"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123441"
+checksum = "sha256:6dd48b40a0499213c06133fe1b3e3022de7a52514d0d6fe9f3e9796549546fd2"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422463"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-arm64-musl"]
-checksum = "sha256:bee6ac9d8398e0eefdbb72858bffc86ab14a4aa674545ca6b3a31923f5f4669a"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123441"
+checksum = "sha256:6dd48b40a0499213c06133fe1b3e3022de7a52514d0d6fe9f3e9796549546fd2"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422463"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-x64"]
-checksum = "sha256:8a37939b2f41cbcab66df1e49c55d56b4759149566cf146e08fe8da40b3d9ebf"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123443"
+checksum = "sha256:3bdb4a48368ba45831c69719f0c72228c7c8405338ff27f7369095ccf07ea248"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422584"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-x64-musl"]
-checksum = "sha256:8a37939b2f41cbcab66df1e49c55d56b4759149566cf146e08fe8da40b3d9ebf"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123443"
+checksum = "sha256:3bdb4a48368ba45831c69719f0c72228c7c8405338ff27f7369095ccf07ea248"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422584"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.macos-arm64"]
-checksum = "sha256:93506bb40caced899f3d098ed836d1ded5397eaac9c4d7b5141d04ca1721a053"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123509"
+checksum = "sha256:09047d473e2eae5b45d8a1ce81b78ae568357f755a451b50eceb27117ca1e10f"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422458"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.macos-x64"]
-checksum = "sha256:15b9f4b95144968c09ef3e54469e31e5fd0f7499ad3670c848ed38ec109b31a1"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123442"
+checksum = "sha256:69519ca01fcc55cbe72820842c465b306216e77f297b5a1b10a6a78092d3d6c5"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422587"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.windows-x64"]
-checksum = "sha256:ce5d35a3d0741b78b1b30b63d0e180d6922e863a55c560c543183126f2fcb75b"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_windows_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123540"
+checksum = "sha256:1fefbef726e354826b029e49dd888e5b62b3da3c67ca1c12968441cb9df4eb71"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_windows_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422464"
 provenance = "github-attestations"
 
 [[tools."github:quarylabs/sqruff"]]
