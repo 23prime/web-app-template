@@ -133,53 +133,53 @@ version = "27.1.0"
 backend = "cargo:cargo-mutants"
 
 [[tools.cspell]]
-version = "10.3.3"
+version = "10.3.6"
 backend = "npm:cspell"
 
 [[tools."github:k1LoW/runn"]]
-version = "1.11.0"
+version = "1.11.1"
 backend = "github:k1LoW/runn"
 
 [tools."github:k1LoW/runn"."platforms.linux-arm64"]
-checksum = "sha256:bee6ac9d8398e0eefdbb72858bffc86ab14a4aa674545ca6b3a31923f5f4669a"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123441"
+checksum = "sha256:6dd48b40a0499213c06133fe1b3e3022de7a52514d0d6fe9f3e9796549546fd2"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422463"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-arm64-musl"]
-checksum = "sha256:bee6ac9d8398e0eefdbb72858bffc86ab14a4aa674545ca6b3a31923f5f4669a"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123441"
+checksum = "sha256:6dd48b40a0499213c06133fe1b3e3022de7a52514d0d6fe9f3e9796549546fd2"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422463"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-x64"]
-checksum = "sha256:8a37939b2f41cbcab66df1e49c55d56b4759149566cf146e08fe8da40b3d9ebf"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123443"
+checksum = "sha256:3bdb4a48368ba45831c69719f0c72228c7c8405338ff27f7369095ccf07ea248"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422584"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.linux-x64-musl"]
-checksum = "sha256:8a37939b2f41cbcab66df1e49c55d56b4759149566cf146e08fe8da40b3d9ebf"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123443"
+checksum = "sha256:3bdb4a48368ba45831c69719f0c72228c7c8405338ff27f7369095ccf07ea248"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422584"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.macos-arm64"]
-checksum = "sha256:93506bb40caced899f3d098ed836d1ded5397eaac9c4d7b5141d04ca1721a053"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_darwin_arm64.zip"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123509"
+checksum = "sha256:09047d473e2eae5b45d8a1ce81b78ae568357f755a451b50eceb27117ca1e10f"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_darwin_arm64.zip"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422458"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.macos-x64"]
-checksum = "sha256:15b9f4b95144968c09ef3e54469e31e5fd0f7499ad3670c848ed38ec109b31a1"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_darwin_amd64.zip"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123442"
+checksum = "sha256:69519ca01fcc55cbe72820842c465b306216e77f297b5a1b10a6a78092d3d6c5"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_darwin_amd64.zip"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422587"
 provenance = "github-attestations"
 
 [tools."github:k1LoW/runn"."platforms.windows-x64"]
-checksum = "sha256:ce5d35a3d0741b78b1b30b63d0e180d6922e863a55c560c543183126f2fcb75b"
-url = "https://github.com/k1LoW/runn/releases/download/v1.11.0/runn_v1.11.0_windows_amd64.tar.gz"
-url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/572123540"
+checksum = "sha256:1fefbef726e354826b029e49dd888e5b62b3da3c67ca1c12968441cb9df4eb71"
+url = "https://github.com/k1LoW/runn/releases/download/v1.11.1/runn_v1.11.1_windows_amd64.tar.gz"
+url_api = "https://api.github.com/repos/k1LoW/runn/releases/assets/595422464"
 provenance = "github-attestations"
 
 [[tools."github:quarylabs/sqruff"]]
@@ -280,36 +280,36 @@ version = "0.23.3"
 backend = "npm:markdownlint-cli2"
 
 [[tools.node]]
-version = "26.9.0"
+version = "26.10.0"
 backend = "core:node"
 
 [tools.node."platforms.linux-arm64"]
-checksum = "sha256:d5077591aa38b48d90bf9b3ac10da8d2f40dce289b20294913c58c19f153eb12"
-url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-linux-arm64.tar.gz"
+checksum = "sha256:423a41bff8e2a2fa15e702fefe2919ef95823b2378744daccb8439302534b44f"
+url = "https://nodejs.org/dist/v26.10.0/node-v26.10.0-linux-arm64.tar.gz"
 
 [tools.node."platforms.linux-arm64-musl"]
-checksum = "sha256:b52b747e86ef6d18068f02f43f508a608358c974dc5da8ef270bc823ba4710ca"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.9.0/node-v26.9.0-linux-arm64-musl.tar.gz"
+checksum = "sha256:d26027bff3197050d2a2b0bfa151b18e8378ed81affa2bf5093804db158979b6"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.10.0/node-v26.10.0-linux-arm64-musl.tar.gz"
 
 [tools.node."platforms.linux-x64"]
-checksum = "sha256:03d9104fc4f19652e74480fed11c023d75981464b7292f21a601c3f95ce7d90d"
-url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-linux-x64.tar.gz"
+checksum = "sha256:cb5c9ce9c80d7b8821e3a258543c71b939138cf17c74d5cc44bbe85d6dbc5ad8"
+url = "https://nodejs.org/dist/v26.10.0/node-v26.10.0-linux-x64.tar.gz"
 
 [tools.node."platforms.linux-x64-musl"]
-checksum = "sha256:669dd67ec374f7315dbac9e119641d0e4f371519e00c4b692f1f81e7a04b747c"
-url = "https://unofficial-builds.nodejs.org/download/release/v26.9.0/node-v26.9.0-linux-x64-musl.tar.gz"
+checksum = "sha256:e42da94821b9422eb76bf5aaf4de0977e04ba320b8aff6148d895a94b08ee223"
+url = "https://unofficial-builds.nodejs.org/download/release/v26.10.0/node-v26.10.0-linux-x64-musl.tar.gz"
 
 [tools.node."platforms.macos-arm64"]
-checksum = "sha256:6f3de7ed853ee283b4bf24b6e426618f1d357401ce5815db1866eb85eb4b05d9"
-url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-arm64.tar.gz"
+checksum = "sha256:751fdf7439f115d87ee2a8f3f18c065b6151852068e3e666ac60ac2996f75ac9"
+url = "https://nodejs.org/dist/v26.10.0/node-v26.10.0-darwin-arm64.tar.gz"
 
 [tools.node."platforms.macos-x64"]
-checksum = "sha256:06b2e742ed9025dc84adc830243b3f731956eac9c321bccd0ede384209af02a8"
-url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-darwin-x64.tar.gz"
+checksum = "sha256:ebbe9ab9b58ad6bb54390d6e2c862c1afa7d4475fb7e8ae8146acde211bf70df"
+url = "https://nodejs.org/dist/v26.10.0/node-v26.10.0-darwin-x64.tar.gz"
 
 [tools.node."platforms.windows-x64"]
-checksum = "sha256:c8af870b5b3e9789a6cbdb30270e7c212e12d76a7afa7fc7f21b6b21cc22a71b"
-url = "https://nodejs.org/dist/v26.9.0/node-v26.9.0-win-x64.zip"
+checksum = "sha256:9fef7eca6743a6b910989cd8e78712376b394fcb9b6e1e9c44a0799a287f90c5"
+url = "https://nodejs.org/dist/v26.10.0/node-v26.10.0-win-x64.zip"
 
 [[tools.rust]]
 version = "1.98.1"
