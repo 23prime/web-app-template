@@ -10,7 +10,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE credentials (
-    user_id UUID PRIMARY KEY REFERENCES users (id) ON DELETE CASCADE,
+    user_id UUID PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
     password_hash TEXT NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
