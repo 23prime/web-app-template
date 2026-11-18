@@ -3,5 +3,3 @@ app/coverage.json
 app/coverage-summary.txt
 app/mutants.out*
 app/mutants.diff
-
-.mise/
