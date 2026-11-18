@@ -21,4 +21,5 @@ dictionaries:
 ignorePaths:
   - '.git'
   - '.vscode'
+  - '.mise'
   - 'node_modules'
